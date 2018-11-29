@@ -82,7 +82,7 @@
               </a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link nav-link-icon" href="#">
+              <a class="nav-link nav-link-icon" href="../opcao-relatorios.jsp">
                 <i class="ni ni-chart-pie-35"></i>
                 <span class="nav-link-inner--text">Relatórios</span>
               </a>
@@ -191,7 +191,7 @@
                     </div>
                     <select name="idcargo">
                     	<c:forEach var="cargo" items="${listaCargos}">
- 							<option>${cargo.cargo}</option> 
+ 							<option value="${cargo.cargo}">${cargo.cargo}</option> 
  						</c:forEach>
                     </select>
                   </div>

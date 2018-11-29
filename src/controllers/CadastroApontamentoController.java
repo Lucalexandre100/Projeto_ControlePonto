@@ -23,7 +23,7 @@ public class CadastroApontamentoController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Funcionarios> listaFunc = Funcionarios.buscarTodos();
-		request.setAttribute("listaFunc", listaFunc);
+		request.getSession().setAttribute("listaFunc", listaFunc);
 		response.sendRedirect("views/CadastroApontamento/cadastro-apontamento.jsp");	
 	}
 

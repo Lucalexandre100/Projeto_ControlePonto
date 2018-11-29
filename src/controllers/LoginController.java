@@ -30,8 +30,8 @@ public class LoginController extends HttpServlet {
 
 			request.setAttribute("usuario", session.getAttribute("login"));
 			request.setAttribute("IdSessao", session.getId());
-
-			response.sendRedirect("views/ConsultaApontamento/consulta-apontamento.jsp");
+			response.sendRedirect("ConsultaApontamento.do");
+			//response.sendRedirect("views/ConsultaApontamento/consulta-apontamento.jsp");
 		} else {
 			response.sendRedirect("login.jsp");
 		}

@@ -125,4 +125,27 @@ public class ApontamentoHoras {
 		return lista;
 	}
 	
+	public static Time retornaHorasPorMes() {
+		Connection con = ConexaoBaseDados.recebeConexao();
+		Time total=null;
+		String sql = "SELECT time_format( SEC_TO_TIME( (SUM(TIME_TO_SEC(HRSAIDAALMOCO)) - SUM(TIME_TO_SEC(HRENTRADA))) \n" + 
+				"+ (SUM(TIME_TO_SEC(HRSAIDA)) - SUM(TIME_TO_SEC(HRVOLTAALMOCO))) ),'%H:%i:%s') \n" + 
+				"AS total_horas FROM APONTAMENTO_HORAS where YEAR(DATACAD) = YEAR(now()) AND month(DATACAD) = month(now())";
+		
+		try {
+			PreparedStatement preparador = con.prepareStatement(sql);
+			ResultSet resultado = preparador.executeQuery();
+			
+			if(resultado.next())
+				total = resultado.getTime("total_horas");
+			
+			con.close();
+		} catch (Exception e) {
+			System.out.println("Erro ao retornar total de horas.");
+			e.printStackTrace();
+		}
+		System.out.println(total);
+		return total;
+	} 
+	
 }

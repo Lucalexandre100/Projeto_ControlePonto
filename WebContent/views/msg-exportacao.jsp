@@ -5,25 +5,19 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Cadastro Cargo | Controle de Ponto</title>
+  <title>Relatório exportado com sucesso | Controle de Ponto</title>
   <!-- Favicon -->
-  <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
-  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <!-- Argon CSS -->
-  <link type="text/css" href="../assets/css/argon.css?v=1.0.0" rel="stylesheet">
-  	<%
-     if (session.getAttribute("login") == null){
-       response.sendRedirect("../../login.jsp");
-     }
- 	%>
+  <link type="text/css" href="assets/css/argon.css?v=1.0.0" rel="stylesheet">
 </head>
 
 <body class="bg-default">
@@ -31,8 +25,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
-        <a class="navbar-brand" href="../login.jsp">
-          <img src="../Imagens/logo2.png" />
+        <a class="navbar-brand" href="#">
+          <img src="Imagens/logo2.png" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -42,8 +36,8 @@
           <div class="navbar-collapse-header d-md-none">
             <div class="row">
               <div class="col-6 collapse-brand">
-                <a href="../login.jsp">
-                  <img src="../Imagens/logo2.png" />
+                <a href="#">
+                  <img src="Imagens/logo2.png" />
                 </a>
               </div>
               <div class="col-6 collapse-close">
@@ -57,37 +51,37 @@
           <!-- Navbar items -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="../CadastroApontamento/cadastro-apontamento.jsp">
+              <a class="nav-link nav-link-icon" href="ConsultaApontamento/consulta-apontamento.jsp">
                 <i class="ni ni-planet"></i>
                 <span class="nav-link-inner--text">Home</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="../opcao-cargo.html">
+              <a class="nav-link nav-link-icon" href="../views/opcao-cargo.html">
                 <i class="ni ni-badge"></i>
                 <span class="nav-link-inner--text dropdown">Cargo</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="../opcao-funcionario.html">
+              <a class="nav-link nav-link-icon" href="../views/opcao-funcionario.html">
                 <i class="ni ni-badge"></i>
                 <span class="nav-link-inner--text">Funcionário</span>
               </a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link nav-link-icon" href="../opcao-apontamento.html">
+              <a class="nav-link nav-link-icon" href="../views/opcao-apontamento.html">
                 <i class="ni ni-time-alarm"></i>
                 <span class="nav-link-inner--text">Apontamento</span>
               </a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link nav-link-icon" href="../opcao-relatorios.jsp">
+              <a class="nav-link nav-link-icon" href="../views/opcao-relatorios.jsp">
                 <i class="ni ni-chart-pie-35"></i>
                 <span class="nav-link-inner--text">Relatórios</span>
               </a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link nav-link-icon" href="../../logoff.do">
+              <a class="nav-link nav-link-icon" href="../logoff.do">
                 <i class="ni ni-button-power"></i>
                 <span class="nav-link-inner--text">Logoff</span>
               </a>
@@ -103,7 +97,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-5 col-md-6">
               <h1 class="text-white">CONTROLE DE PONTO</h1>
-              <p class="text-lead text-light">Cadastro de Cargo</p>
+            <p class="text-lead text-light">Relatório exportado com sucesso.</p>
             </div>
           </div>
         </div>
@@ -120,36 +114,9 @@
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8">
             <div class="card-body px-lg-5 py-lg-5">
-              <form role="form" action="../../Cargo.do" method="post">
-                <div class="form-group">
-                  <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-badge"></i></span>
-                    </div>
-                    <input class="form-control" name="cargo" placeholder="Cargo" type="text">
-                  </div>
+				<div class="text-center">
+					<p>Abra a pasta: "C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\ControlePonto - Reports\"</p>
                 </div>
-				<div class="form-group">
-					<label>Carga Horária</label>
-                  <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-time-alarm"></i></span>
-                    </div>
-                    <input class="form-control" name="cargaHoraria" placeholder="Carga Horária" type="time">
-                  </div>
-                </div>
-				<div class="form-group">
-                  <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
-                    </div>
-                    <input class="form-control" name="salario" placeholder="Salário Base" type="number" step="00.01">
-                  </div>
-                </div>
-                <div class="text-center">
-                  <input type="submit" class="btn btn-primary mt-4" value="Cadastrar cargo">
-                </div>
-              </form>
             </div>
           </div>
         </div>

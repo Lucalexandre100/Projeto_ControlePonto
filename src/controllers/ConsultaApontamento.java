@@ -21,6 +21,7 @@ public class ConsultaApontamento extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<ApontamentoHoras> lista = ApontamentoHoras.buscarTodos();
 		request.getSession().setAttribute("listaApont", lista);
+		request.getSession().setAttribute("h", ApontamentoHoras.retornaHorasPorMes());
 		response.sendRedirect("views/ConsultaApontamento/consulta-apontamento.jsp");
 	}
 

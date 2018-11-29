@@ -84,7 +84,7 @@
               </a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link nav-link-icon" href="#">
+              <a class="nav-link nav-link-icon" href="../opcao-relatorios.jsp">
                 <i class="ni ni-chart-pie-35"></i>
                 <span class="nav-link-inner--text">Relatórios</span>
               </a>
@@ -138,16 +138,16 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<c:forEach var="apont" items="${listaApont}">
+							<c:forEach var="apont" items="${listaApont}">
+								<tr>
  									<td>${apont.dataCad}</td>
  									<td>${apont.hrEntrada}</td>
  									<td>${apont.hrSaidaAlmoco}</td>
  									<td>${apont.hrVoltaAlmoco}</td>
  									<td>${apont.hrSaida}</td>
  									<td>${apont.idFunc}</td>
- 								</c:forEach>
-							</tr>
+ 								</tr>
+ 							</c:forEach>
 						</tbody>
 					</table>
 				</div>
@@ -175,6 +175,10 @@
                     </a>
                   </li>
                 </ul>
+                <p><strong>
+                Total de horas do mês: <c:set var="h" value="${h}"></c:set>
+                <c:out value="${h}"></c:out>
+                </strong></p>
               </nav>
             </div>
 				<!-- Rodapé Table -->

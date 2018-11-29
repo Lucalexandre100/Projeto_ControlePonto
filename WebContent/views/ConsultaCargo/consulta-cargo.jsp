@@ -84,7 +84,7 @@
               </a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link nav-link-icon" href="#">
+              <a class="nav-link nav-link-icon" href="../opcao-relatorios.jsp">
                 <i class="ni ni-chart-pie-35"></i>
                 <span class="nav-link-inner--text">Relatórios</span>
               </a>
